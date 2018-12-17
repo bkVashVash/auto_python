@@ -1,6 +1,10 @@
 #! python3
-# pw.py
 
+'''
+我喜欢鲁鲁修
+我喜欢犬夜叉
+我喜欢海贼王
+'''
 
 import pyperclip
 text = pyperclip.paste()
@@ -15,3 +19,9 @@ print(text)
 text = '\n'.join(text)
 print(text)
 pyperclip.copy(text)
+
+'''
+* 我喜欢鲁鲁修
+* 我喜欢犬夜叉
+* 我喜欢海贼王
+'''
