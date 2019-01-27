@@ -1,2 +1,5 @@
 #   Efficient script    
-1，bili.py               ---  quick open bilibili，亮剑，爱否
+bili.py               ---  quick open bilibili，亮剑，爱否
+
+#   Pdf script
+pdf  
