@@ -1,22 +1,16 @@
-# import PyPDF2
-#
-#
-# pdffile = open('2.pdf','rb')
-# pdfreader = PyPDF2.PdfFileReader(pdffile)
-#
-# pageobj = pdfreader.getPage(0)
-# print(pageobj.extractText().split('\n'))
-
+# todo  输出pdf文本（中文），保存到变量
 
 from urllib.request import urlopen
-from pdfminer.pdfinterp import PDFResourceManager, process_pdf
-from pdfminer.converter import TextConverter
-from pdfminer.layout import LAParams
 from io import StringIO
 from io import open
 
+from pdfminer.pdfinterp import PDFResourceManager, process_pdf
+from pdfminer.converter import TextConverter
+from pdfminer.layout import LAParams
+
+
 def readPDF(pdfFile):
-    '''从pdf输出文本'''
+    """从pdf输出文本"""
     rsrcmgr = PDFResourceManager()
     retstr = StringIO()
     laparams = LAParams()
@@ -29,7 +23,8 @@ def readPDF(pdfFile):
     retstr.close()
     return content
 
-pdfFile = open('2.pdf','rb')
+
+pdfFile = open('test.pdf','rb')
 outputString = readPDF(pdfFile)
 print(outputString)
 pdfFile.close()
